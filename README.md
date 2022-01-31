@@ -1,16 +1,13 @@
-# flutter_webview_boilerplate
+# Flutter Webview Boilerplate
 
-A new Flutter project.
+This is boilerplate to make simple webview android application
 
-## Getting Started
+## How to Run
 
-This project is a starting point for a Flutter application.
+1. Git clone this repository
+2. Open your cloned repository folder
+3. Run flutter pub get in your terminal 
+4. Edit the URL in lib/webview.dart
+5. Run flutter pub run 
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## How to Deploy to PlayStore
