@@ -2,8 +2,9 @@
     package="com.example.flutter_webview_boilerplate"> 
     <uses-permission android:name="android.permission.INTERNET"/>
 
+    <!-- Edit your APK name in android:label -->
    <application
-        android:label="flutter_webview_boilerplate"     // Edit Your APK Name.
+        android:label="flutter_webview_boilerplate"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
