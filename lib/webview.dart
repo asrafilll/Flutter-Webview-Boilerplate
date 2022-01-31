@@ -29,7 +29,7 @@ class _WebviewState extends State<Webview> {
         child: Builder(
           builder: (BuildContext context) {
             return WebView(
-              // Change your desire Url
+              // Change your desire URL
               initialUrl: 'https://flutter.dev',
               javascriptMode: JavascriptMode.unrestricted,
               onWebViewCreated: (WebViewController webViewController) {

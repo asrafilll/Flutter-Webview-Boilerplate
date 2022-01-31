@@ -1,7 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.flutter_webview_boilerplate">
+    package="com.example.flutter_webview_boilerplate"> 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
    <application
-        android:label="flutter_webview_boilerplate"
+        android:label="flutter_webview_boilerplate"     // Edit Your APK Name.
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_webview_boilerplate/webview.dart';
 
-void main() => runApp(const MainApp());
+void main() => runApp(MainApp());
 
 class MainApp extends StatefulWidget {
-  const MainApp({Key? key}) : super(key: key);
-
   @override
   _MainAppState createState() => _MainAppState();
 }
