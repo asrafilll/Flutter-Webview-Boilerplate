@@ -11,7 +11,8 @@ class Webview extends StatefulWidget {
 }
 
 class _WebviewState extends State<Webview> {
-  final Completer<WebViewController> _controller =
+  late WebViewController _controller;
+  final Completer<WebViewController> _controllerCompleter =
       Completer<WebViewController>();
 
   @override
@@ -19,6 +20,15 @@ class _WebviewState extends State<Webview> {
     super.initState();
     if (Platform.isAndroid) {
       WebView.platform = SurfaceAndroidWebView();
+    }
+  }
+
+  Future<bool> _goBack(BuildContext context) async {
+    if (await _controller.canGoBack()) {
+      _controller.goBack();
+      return Future.value(false);
+    } else {
+      return Future.value(true);
     }
   }
 
@@ -33,11 +43,9 @@ class _WebviewState extends State<Webview> {
               initialUrl: 'https://flutter.dev',
               javascriptMode: JavascriptMode.unrestricted,
               onWebViewCreated: (WebViewController webViewController) {
-                _controller.complete(webViewController);
-              },
-              onProgress: (int progress) {
-                // ignore: avoid_print
-                print('Application is loading (progress : $progress%)');
+                _controllerCompleter.future
+                    .then((value) => _controller = value);
+                _controllerCompleter.complete(webViewController);
               },
             );
           },
