@@ -4,9 +4,9 @@
 
     <!-- Edit your APK name in android:label -->
    <application
-        android:label="flutter_webview_boilerplate"
+        android:label="KKBS"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"
             android:exported="true"
